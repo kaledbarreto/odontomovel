@@ -46,12 +46,12 @@ export function Modal({ isOpen, closeModal, title, children }: ModalProps) {
                   </Dialog.Title>
                   <button 
                     onClick={closeModal}
-                    className="p-2 rounded-full hover:bg-neutral-100 text-neutral-500 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="p-2 rounded-full hover:bg-graylight text-grayui transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <X className="w-6 h-6" />
                   </button>
                 </div>
-                <div className="mt-2 text-neutral-600">
+                <div className="mt-2 text-grayui">
                   {children}
                 </div>
                 <div className="mt-8 flex justify-end">

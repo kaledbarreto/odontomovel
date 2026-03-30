@@ -1,131 +1,243 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { motion } from "framer-motion";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { H1, H2, Text } from "@/components/ui/Typography";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
-import { Stethoscope, Microscope, HeartHandshake } from "lucide-react";
+import { Stethoscope, HeartHandshake, Users, CheckCircle, ClipboardCheck, CalendarCheck, Send } from "lucide-react";
+import { PhotoSlot } from "@/components/ui/PhotoSlot";
 
 const formSchema = z.object({
-  nome: z.string().min(2, "Nome é obrigatório"),
-  email: z.string().email("E-mail inválido"),
-  telefone: z.string().min(10, "Telefone inválido"),
-  profissao: z.string().min(1, "Selecione uma profissão"),
-  cro: z.string().optional()
+  nome: z.string().min(2, "Este campo é obrigatório."),
+  email: z.string().email("Digite um e-mail válido."),
+  telefone: z.string().min(10, "Digite um telefone válido."),
+  profissao: z.string().min(1, "Este campo é obrigatório."),
+  cro: z.string().optional(),
+  disponibilidade: z.string().min(1, "Este campo é obrigatório."),
+  outros_municipios: z.string().min(1, "Este campo é obrigatório."),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
 export function Voluntario() {
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset, watch } = useForm<FormData>({
-    resolver: zodResolver(formSchema)
-  });
+  const [submitted, setSubmitted] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+    watch,
+  } = useForm<FormData>({ resolver: zodResolver(formSchema) });
 
-  const onSubmit = async (data: FormData) => {
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log(data);
-    alert("Inscrição enviada! Em breve entraremos em contato com as próximas etapas.");
+  const onSubmit = async (_data: FormData) => {
+    await new Promise((r) => setTimeout(r, 1000));
+    setSubmitted(true);
     reset();
   };
 
   const isDentist = watch("profissao") === "dentista";
 
-  return (
-    <Section id="voluntario" className="bg-primary-600 py-24 text-white">
-      <Container>
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
-          
-          <div>
-            <H1 className="text-white mb-6">Profissionais que doam tempo, técnica e cuidado para o impacto</H1>
-            <Text className="text-primary-100 mb-10 text-lg">
-              Sem os nossos voluntários, o Odontomóvel não sairia do lugar. Convidamos profissionais da odontologia e estudantes a 
-              viverem uma experiência humana transformadora, exercendo a profissão em sua forma mais essencial: o cuidado ao próximo.
-            </Text>
+  const perfis = [
+    {
+      icon: <Stethoscope className="w-6 h-6" />,
+      title: "Cirurgiões-dentistas",
+      desc: "Profissionais formados e com CRO ativo para atendimento clínico.",
+    },
+    {
+      icon: <HeartHandshake className="w-6 h-6" />,
+      title: "Auxiliares / TSB",
+      desc: "Conforme necessidade local e agenda de missões.",
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Profissionais de apoio",
+      desc: "Triagem, logística, educação em saúde — conforme agenda.",
+    },
+  ];
 
-            <H2 className="text-white text-2xl mb-6">Quem pode participar?</H2>
+  return (
+    <Section
+      id="voluntario"
+      className="py-0 overflow-hidden relative"
+      style={{ background: "linear-gradient(150deg, #1A4F8A 0%, #1F5E99 40%, #0F3D5A 100%)" }}
+    >
+      {/* Decorative background blob */}
+      <div
+        className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-10"
+        style={{ background: "radial-gradient(circle, #1FAF7A 0%, transparent 70%)" }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        style={{
+          backgroundImage: "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+      <Container className="relative z-10 py-14 md:py-20">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-start">
+
+          {/* Left: copy */}
+          <div>
+            {/* Photo collage — top of left column */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="grid grid-cols-3 gap-3 mb-10"
+            >
+              <PhotoSlot
+                dark
+                label="Missão em campo"
+                className="col-span-2 h-44"
+              />
+              <div className="flex flex-col gap-3">
+                <PhotoSlot dark label="Equipe voluntária" className="flex-1" />
+                <PhotoSlot dark label="Dentista em ação" className="flex-1" />
+              </div>
+            </motion.div>
+
+            <span className="inline-block mb-5 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 text-white text-sm font-semibold tracking-wide uppercase">
+              Seja Voluntário
+            </span>
+            <h2 className="text-h1 font-heading font-black text-white leading-tight mb-6">
+              Profissionais que doam tempo, técnica e cuidado — com impacto real.
+            </h2>
+            <p className="text-primary-100 mb-10 text-lg leading-relaxed">
+              O Odontomóvel conta com a força de profissionais comprometidos com a saúde e com o social. Buscamos dentistas e colaboradores que queiram contribuir com atendimento humanizado e organizado em missões e ações.
+            </p>
+
+            <h3 className="text-white text-xl font-heading font-bold mb-5">Quem pode ser voluntário</h3>
             <div className="space-y-4 mb-10">
-              <div className="flex gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 items-center">
-                <div className="bg-white/10 p-3 rounded-full"><Stethoscope className="w-6 h-6 text-brand-orange" /></div>
-                <div>
-                  <h4 className="font-bold text-lg">Cirurgiões-Dentistas</h4>
-                  <p className="text-sm text-primary-100">Profissionais formados e com CRO ativo para atendimento clínico.</p>
+              {perfis.map((p, i) => (
+                <div
+                  key={i}
+                  className="flex gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 items-center"
+                >
+                  <div className="bg-white/10 p-3 rounded-full text-green-400">{p.icon}</div>
+                  <div>
+                    <h4 className="font-bold text-lg text-white">{p.title}</h4>
+                    <p className="text-sm text-primary-100">{p.desc}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 items-center">
-                <div className="bg-white/10 p-3 rounded-full"><Microscope className="w-6 h-6 text-brand-orange" /></div>
-                <div>
-                  <h4 className="font-bold text-lg">TSB e Estudantes</h4>
-                  <p className="text-sm text-primary-100">Técnicos em Saúde Bucal ou acadêmicos no final do curso para auxílio e prevenção.</p>
-                </div>
-              </div>
-              <div className="flex gap-4 p-4 rounded-2xl bg-white/10 border border-white/20 items-center">
-                <div className="bg-white/10 p-3 rounded-full"><HeartHandshake className="w-6 h-6 text-brand-orange" /></div>
-                <div>
-                  <h4 className="font-bold text-lg">Apoio Geral</h4>
-                  <p className="text-sm text-primary-100">Voluntários para triagem, recreação infantil e logística nos territórios.</p>
-                </div>
-              </div>
+              ))}
             </div>
 
-            <H2 className="text-white text-2xl mb-6">Como funciona?</H2>
-            <ol className="flex flex-col md:flex-row gap-6 relative">
-              <div className="hidden md:block absolute top-[18px] left-0 w-full h-[2px] bg-white/20"></div>
+            <h3 className="text-white text-xl font-heading font-bold mb-5">Como funciona</h3>
+            <ol className="flex flex-col gap-3">
               {[
-                "Preencha o formulário de cadastro",
-                "Passe por triagem e agendamento",
-                "Receba orientações e normas biossegurança"
-              ].map((step, i) => (
-                <li key={i} className="flex-1 relative z-10 flex flex-col md:items-center text-left md:text-center">
-                  <div className="w-10 h-10 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center mb-4 shrink-0">
-                    {i+1}
+                { step: "Cadastro", desc: "Preencha o formulário ao lado com seus dados e disponibilidade.", icon: <Send className="w-5 h-5" /> },
+                { step: "Triagem e alinhamento", desc: "A equipe avalia o perfil e entra em contato para combinar a missão.", icon: <ClipboardCheck className="w-5 h-5" /> },
+                { step: "Orientações e atuação", desc: "Você recebe as instruções e entra na agenda de ações do projeto.", icon: <CalendarCheck className="w-5 h-5" /> },
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white/8 border border-white/15" style={{ background: "rgba(255,255,255,0.06)" }}>
+                  <div className="w-11 h-11 rounded-xl bg-green-500/20 border border-green-400/30 flex items-center justify-center text-green-400 shrink-0">
+                    {item.icon}
                   </div>
-                  <span className="text-sm font-medium text-primary-50">{step}</span>
+                  <div>
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <span className="text-xs font-black text-green-400 tabular-nums">0{i + 1}</span>
+                      <span className="font-bold text-white">{item.step}</span>
+                    </div>
+                    <p className="text-sm text-primary-200 leading-snug">{item.desc}</p>
+                  </div>
                 </li>
               ))}
             </ol>
           </div>
 
-          {/* Form */}
-          <div className="bg-white text-neutral-800 p-8 md:p-10 rounded-[2rem] shadow-2xl">
-            <h3 className="text-2xl font-bold text-primary-700 mb-8 text-center">Quero me voluntariar</h3>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <Input placeholder="Nome Completo" {...register("nome")} error={errors.nome?.message} />
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <Input type="email" placeholder="E-mail" {...register("email")} error={errors.email?.message} />
-                <Input type="tel" placeholder="Telefone / WhatsApp" {...register("telefone")} error={errors.telefone?.message} />
-              </div>
+          {/* Right: form */}
+          <div className="bg-white text-grafite p-8 md:p-10 rounded-2xl shadow-elevated">
+            <h3 className="text-2xl font-heading font-bold text-primary-700 mb-8 text-center">
+              Quero me voluntariar
+            </h3>
 
-              <Select 
-                {...register("profissao")} 
-                error={errors.profissao?.message}
-                options={[
-                  { label: "Cirurgião-Dentista", value: "dentista" },
-                  { label: "Técnico em Saúde Bucal (TSB)", value: "tsb" },
-                  { label: "Estudante de Odontologia", value: "estudante" },
-                  { label: "Apoio Logístico/Geral", value: "apoio" },
-                ]}
-              />
-
-              {isDentist && (
-                <Input placeholder="Número do CRO e Estado (Ex: 12345-BA)" {...register("cro")} error={errors.cro?.message} />
-              )}
-              
-              <div className="text-xs text-neutral-500 mb-6">
-                Ao enviar, você concorda com o uso de seus dados para contato a respeito das missões voluntárias do Odontomóvel.
+            {submitted ? (
+              <div className="text-center py-10">
+                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <p className="text-xl font-semibold text-grafite">Cadastro realizado!</p>
+                <p className="text-grayui mt-2">
+                  Obrigado por se disponibilizar. A equipe entrará em contato quando houver ações compatíveis.
+                </p>
               </div>
-              
-              <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? "Enviando..." : "Enviar Inscrição"}
-              </Button>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                <Input
+                  label="Nome completo"
+                  placeholder="Digite seu nome"
+                  {...register("nome")}
+                  error={errors.nome?.message}
+                />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <Input
+                    label="E-mail"
+                    type="email"
+                    placeholder="seuemail@dominio.com"
+                    {...register("email")}
+                    error={errors.email?.message}
+                  />
+                  <Input
+                    label="Telefone/WhatsApp"
+                    type="tel"
+                    placeholder="(DD) 9xxxx-xxxx"
+                    {...register("telefone")}
+                    error={errors.telefone?.message}
+                  />
+                </div>
+                <Select
+                  label="Profissão"
+                  {...register("profissao")}
+                  error={errors.profissao?.message}
+                  options={[
+                    { label: "Cirurgião-dentista", value: "dentista" },
+                    { label: "ASB", value: "asb" },
+                    { label: "TSB", value: "tsb" },
+                    { label: "Estudante", value: "estudante" },
+                    { label: "Outro", value: "outro" },
+                  ]}
+                />
+                {isDentist && (
+                  <Input
+                    label="Registro profissional"
+                    placeholder="CRO/UF e número"
+                    {...register("cro")}
+                  />
+                )}
+                <Select
+                  label="Disponibilidade"
+                  {...register("disponibilidade")}
+                  error={errors.disponibilidade?.message}
+                  options={[
+                    { label: "Curta", value: "curta" },
+                    { label: "Média", value: "media" },
+                    { label: "Longa (a combinar)", value: "longa" },
+                  ]}
+                />
+                <Select
+                  label="Aceita atuar em outros municípios?"
+                  {...register("outros_municipios")}
+                  error={errors.outros_municipios?.message}
+                  options={[
+                    { label: "Sim", value: "sim" },
+                    { label: "Não", value: "nao" },
+                    { label: "Depende", value: "depende" },
+                  ]}
+                />
+                <p className="text-xs text-grayui">
+                  Ao enviar, você concorda com o uso dos seus dados para retorno de contato. Não compartilhamos suas informações com terceiros.
+                </p>
+                <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Enviando..." : "Cadastrar para voluntariado"}
+                </Button>
+              </form>
+            )}
           </div>
-
         </div>
       </Container>
     </Section>

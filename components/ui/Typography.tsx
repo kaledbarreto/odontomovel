@@ -19,7 +19,7 @@ export function H2({ className, children, ...props }: React.HTMLAttributes<HTMLH
 
 export function Text({ className, children, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
-    <p className={cn("text-base md:text-lg lg:text-xl text-neutral-600 leading-relaxed", className)} {...props}>
+    <p className={cn("text-base md:text-lg lg:text-xl text-grayui leading-relaxed", className)} {...props}>
       {children}
     </p>
   );

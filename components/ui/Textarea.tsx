@@ -1,24 +1,36 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: string;
+  label?: string;
 }
 
-export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(({ className, error, ...props }, ref) => {
-  return (
-    <div className="w-full">
-      <textarea
-        ref={ref}
-        className={cn(
-          "w-full px-4 sm:px-6 py-3 min-h-[120px] rounded-2xl border border-neutral-300 bg-white text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/20 transition-all duration-300 resize-y",
-          error && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
-          className
+export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+  ({ className, error, label, id, rows = 4, ...props }, ref) => {
+    const inputId = id || label?.toLowerCase().replace(/\s+/g, "-");
+    return (
+      <div className="flex flex-col gap-1.5">
+        {label && (
+          <label htmlFor={inputId} className="text-sm font-medium text-grafite">
+            {label}
+          </label>
         )}
-        {...props}
-      />
-      {error && <p className="mt-1.5 text-sm text-red-500 px-2">{error}</p>}
-    </div>
-  );
-});
+        <textarea
+          id={inputId}
+          ref={ref}
+          rows={rows}
+          className={cn(
+            "w-full px-4 py-3 rounded-xl border text-grafite placeholder:text-grayui text-base transition-all duration-200 resize-none",
+            "bg-white focus:outline-none focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500",
+            error ? "border-danger" : "border-bordercolor hover:border-primary-300",
+            className
+          )}
+          {...props}
+        />
+        {error && <p className="text-xs text-danger font-medium">{error}</p>}
+      </div>
+    );
+  }
+);
 Textarea.displayName = "Textarea";

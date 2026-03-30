@@ -11,7 +11,7 @@ const config: Config = {
       center: true,
       padding: "1rem",
       screens: {
-        "2xl": "1280px", // max-w-7xl roughly
+        "2xl": "1200px",
       },
     },
     screens: {
@@ -23,33 +23,54 @@ const config: Config = {
       "2xl": "1536px",
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-montserrat)", "sans-serif"],
+      },
       fontSize: {
-        h1: "clamp(1.875rem, 5vw, 3.75rem)",
-        h2: "clamp(1.5rem, 4vw, 2.5rem)",
+        h1: "clamp(2.75rem, 5vw, 3.25rem)",
+        h2: "clamp(1.75rem, 4vw, 2.125rem)",
+        h3: "clamp(1.25rem, 3vw, 1.5rem)",
       },
       spacing: {
         "18": "4.5rem",
-        "36": "9rem",
+        section: "5rem",
       },
       colors: {
         primary: {
-          50: '#e6ebf0',
-          100: '#ccD7E1',
-          200: '#99AFc3',
-          300: '#6687a5',
-          400: '#335F87',
-          500: '#003366',
-          600: '#002952',
-          700: '#001E3D',
-          800: '#001429',
-          900: '#000A14',
+          50: "#EBF2FA",
+          100: "#C4D9F1",
+          200: "#9CC1E8",
+          300: "#74A8DE",
+          400: "#4C90D5",
+          500: "#1F5E99",
+          600: "#1A5088",
+          700: "#153E6A",
+          800: "#0F2D4C",
+          900: "#0A1C30",
         },
-        brand: {
-          orange: '#FF6B00',
-        }
+        green: {
+          50: "#EAFAF3",
+          100: "#C2F0DC",
+          200: "#99E5C4",
+          300: "#66D8A8",
+          400: "#3DC98D",
+          500: "#1FAF7A",
+          600: "#199663",
+          700: "#127A4E",
+          800: "#0C5D3A",
+          900: "#064026",
+        },
+        grafite: "#101828",
+        grayui: "#667085",
+        graylight: "#F2F4F7",
+        warning: "#F79009",
+        danger: "#D92D20",
+        bordercolor: "#D0D5DD",
       },
       boxShadow: {
-        hero: "0 35px 60px -12px rgba(0,0,0,0.25)",
+        card: "0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)",
+        elevated: "0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)",
       },
       animation: {
         "fade-in": "fadeIn 0.8s ease-out forwards",

@@ -31,7 +31,7 @@ export default function MapComponent() {
 
   if (!isMounted) {
     return (
-      <div className="w-full h-full min-h-[300px] bg-neutral-100 animate-pulse rounded-3xl" />
+      <div className="w-full h-full min-h-[300px] bg-graylight animate-pulse rounded-3xl" />
     );
   }
 

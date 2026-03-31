@@ -33,7 +33,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(({ classN
           <option key={opt.value} value={opt.value}>{opt.label}</option>
         ))}
       </select>
-      {error && <p className="text-xs text-danger font-medium">{error}</p>}
+      {error && <p role="alert" className="text-xs text-danger font-medium">{error}</p>}
     </div>
   );
 });

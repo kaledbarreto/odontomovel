@@ -44,8 +44,9 @@ export function Modal({ isOpen, closeModal, title, children }: ModalProps) {
                   <Dialog.Title as="h3" className="text-2xl font-bold leading-6 text-primary-600">
                     {title}
                   </Dialog.Title>
-                  <button 
+                  <button
                     onClick={closeModal}
+                    aria-label="Fechar"
                     className="p-2 rounded-full hover:bg-graylight text-grayui transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <X className="w-6 h-6" />

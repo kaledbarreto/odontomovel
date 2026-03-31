@@ -9,7 +9,9 @@ import { Container } from "@/components/ui/Container";
 const NAV_ITEMS = [
   { label: "O Projeto", to: "projeto" },
   { label: "Impacto", to: "impacto" },
+  { label: "Como Apoiar", to: "apoio" },
   { label: "Voluntário", to: "voluntario" },
+  { label: "Formação ASB", to: "formacao-asb" },
   { label: "Transparência", to: "transparencia" },
   { label: "Contato", to: "contato" },
 ];
@@ -39,8 +41,8 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          <ul className="flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-6">
+          <ul className="flex items-center gap-5">
             {NAV_ITEMS.map((item) => (
               <li key={item.to}>
                 <Link
@@ -98,7 +100,7 @@ export function Header() {
       )}
 
       {/* Mobile sticky CTA bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t border-bordercolor bg-white shadow-elevated">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t border-bordercolor bg-white shadow-elevated" style={{ paddingBottom: "env(safe-area-inset-bottom)" }}>
         <Link to="apoio" smooth={true} duration={500} className="flex-1">
           <button className="w-full py-4 text-sm font-bold text-primary-500 text-center">
             Apoiar

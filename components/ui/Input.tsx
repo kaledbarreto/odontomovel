@@ -27,7 +27,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           )}
           {...props}
         />
-        {error && <p className="text-xs text-danger font-medium">{error}</p>}
+        {error && <p role="alert" className="text-xs text-danger font-medium">{error}</p>}
       </div>
     );
   }

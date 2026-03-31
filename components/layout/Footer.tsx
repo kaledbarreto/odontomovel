@@ -9,9 +9,9 @@ const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "O Projeto", href: "#projeto" },
   { label: "Impacto", href: "#impacto" },
-  { label: "Como Apoiar", href: "#apoiar" },
+  { label: "Como Apoiar", href: "#apoio" },
   { label: "Seja Voluntário", href: "#voluntario" },
-  { label: "Formação ASB", href: "#formacao" },
+  { label: "Formação ASB", href: "#formacao-asb" },
   { label: "Transparência", href: "#transparencia" },
   { label: "Contato", href: "#contato" },
 ];
@@ -41,6 +41,7 @@ function FaqAccordion({ Q, A }: { Q: string; A: string }) {
     <div className="border border-bordercolor rounded-xl overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         className="w-full flex items-center justify-between gap-4 p-4 text-left bg-graylight hover:bg-primary-50 transition-colors"
       >
         <span className="font-semibold text-grafite text-sm">{Q}</span>
@@ -49,9 +50,11 @@ function FaqAccordion({ Q, A }: { Q: string; A: string }) {
           className={`shrink-0 text-grayui transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
-      {open && (
+      <div
+        className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${open ? "max-h-48" : "max-h-0"}`}
+      >
         <div className="p-4 pt-3 text-sm text-grayui leading-relaxed bg-white">{A}</div>
-      )}
+      </div>
     </div>
   );
 }

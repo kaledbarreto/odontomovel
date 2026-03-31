@@ -57,7 +57,7 @@ export function Voluntario() {
     {
       icon: <Users className="w-6 h-6" />,
       title: "Profissionais de apoio",
-      desc: "Triagem, logística, educação em saúde — conforme agenda.",
+      desc: "Triagem, logística, educação em saúde, conforme a agenda de missões.",
     },
   ];
 

@@ -103,7 +103,7 @@ export function Formacao() {
                   Certificado de Participação
                 </h3>
                 <div className="text-sm text-grayui mb-6">
-                  Auxiliar em Saúde Bucal — Programa ITBSS
+                  Auxiliar em Saúde Bucal · Programa ITBSS
                 </div>
 
                 {/* Decorative lines */}

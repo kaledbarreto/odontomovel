@@ -118,7 +118,7 @@ export function Impacto() {
             Nosso Impacto
           </span>
           <h2 className="text-h1 font-heading font-black text-white leading-tight mb-5">
-            Impacto que se mede em sorrisos — e em oportunidades.
+            Impacto que se mede em sorrisos e em oportunidades.
           </h2>
           <p className="text-lg text-primary-300 leading-relaxed">
             O ITBSS não é só atendimento clínico. A cada ciclo, levamos prevenção, mobilização e formação. Quem passa pelo programa sai com mais do que um tratamento no dente.

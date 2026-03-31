@@ -210,7 +210,7 @@ export function Inicio() {
             className="text-center mb-10"
           >
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">O que fazemos</h2>
-            <p className="text-primary-300">Três frentes de atuação que transformam realidades</p>
+            <p className="text-primary-300">O que fazemos em campo</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -224,13 +224,13 @@ export function Inicio() {
               {
                 icon: <HeartHandshake className="w-8 h-8 text-green-400" />,
                 title: "Voluntariado profissional",
-                desc: "Dentistas e profissionais da saúde somam forças em missões organizadas, com impacto real e mensurável.",
+                desc: "Dentistas e profissionais de saúde participam de missões organizadas, com protocolos claros e resultados documentados.",
                 photoLabel: "Equipe voluntária em missão",
               },
               {
                 icon: <BookOpen className="w-8 h-8 text-green-400" />,
                 title: "Formação local (ASB)",
-                desc: "Durante a permanência do caminhão na comunidade, treinamos moradores como auxiliares de saúde bucal, fortalecendo oportunidades e autonomia.",
+                desc: "Durante a permanência do caminhão, treinamos moradores como auxiliares de saúde bucal. Eles ganham qualificação prática e novas possibilidades de trabalho.",
                 photoLabel: "Formação de moradores ASB",
               },
             ].map((card, idx) => (

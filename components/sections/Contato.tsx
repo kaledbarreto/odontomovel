@@ -71,7 +71,7 @@ export function Contato() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-grayui mb-10 text-lg leading-relaxed"
             >
-              Se você quer apoiar, ser voluntário, propor parceria pública ou educacional, preencha o formulário ao lado. Retornaremos o mais breve possível.
+              Quer apoiar, ser voluntário ou propor uma parceria? Preencha o formulário ao lado. Respondemos em até 48 horas úteis.
             </motion.p>
 
             {/* Contact channels */}

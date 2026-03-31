@@ -130,7 +130,7 @@ export function ComoFunciona() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-white/70 text-lg md:text-xl max-w-2xl leading-relaxed"
             >
-              Nossa metodologia garante intervenções profundas que deixam um legado educacional e profissional — não apenas tratamento clínico.
+              Cada ciclo vai além do atendimento clínico: o caminhão fica no território, cuida das pessoas e forma quem vive lá.
             </motion.p>
 
             <motion.div
@@ -226,7 +226,7 @@ export function ComoFunciona() {
                 </span>
               </p>
               <p className="text-primary-300 max-w-2xl leading-relaxed">
-                Permanecendo por um período no território para atender a população, realizar ações educativas e apoiar a formação prática local — e, em seguida, segue para uma nova região.
+                O caminhão fica por um período no território, atende a população, realiza ações educativas e apoia a formação local. Depois segue para uma nova região.
               </p>
             </div>
           </div>

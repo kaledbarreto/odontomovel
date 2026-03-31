@@ -8,25 +8,25 @@ import { ShieldCheck, HeartPulse, GraduationCap, Globe2, User, Check } from "luc
 const pilares = [
   {
     title: "Saúde que transforma territórios",
-    desc: "Levamos atendimento odontológico gratuito e ações de prevenção diretamente às comunidades, reduzindo desigualdades no acesso à saúde.",
+    desc: "Levamos atendimento odontológico gratuito e ações de prevenção a comunidades onde o acesso à saúde é limitado ou inexistente.",
     icon: <HeartPulse className="w-7 h-7" />,
     bg: "#4DAD75",
   },
   {
     title: "Voluntariado com impacto real",
-    desc: "Mobilizamos profissionais comprometidos que atuam de forma organizada e humanizada, gerando impacto direto na vida das pessoas atendidas.",
+    desc: "Profissionais comprometidos que atuam com protocolos claros. Cada missão tem efeito direto na vida de quem é atendido.",
     icon: <ShieldCheck className="w-7 h-7" />,
     bg: "#284679",
   },
   {
     title: "Formação que gera futuro",
-    desc: "Capacitamos moradores das próprias comunidades, criando oportunidades de desenvolvimento, autonomia e inserção no mercado de trabalho.",
+    desc: "Treinamos moradores das próprias comunidades. Eles saem do programa com qualificação prática e caminhos reais para o mercado de trabalho.",
     icon: <GraduationCap className="w-7 h-7" />,
     bg: "#4DAD75",
   },
   {
     title: "Cooperação que amplia impacto",
-    desc: "Fortalecemos a parceria entre instituições brasileiras e alemãs, ampliando a capacidade de atuação e garantindo continuidade ao projeto.",
+    desc: "A parceria entre instituições brasileiras e alemãs amplia o que o projeto consegue fazer e mantém a operação no longo prazo.",
     icon: <Globe2 className="w-7 h-7" />,
     bg: "#284679",
   },
@@ -125,9 +125,9 @@ export function Projeto() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-white/70 text-lg md:text-xl max-w-2xl leading-relaxed"
             >
-              Uma iniciativa humanitária de saúde bucal gratuita em cooperação entre{" "}
+              Cooperação entre{" "}
               <span className="text-white font-semibold">AZB-Plus</span> (Alemanha) e{" "}
-              <span className="text-white font-semibold">ITBSS</span> (Brasil), levando cuidado e formação diretamente a quem precisa.
+              <span className="text-white font-semibold">ITBSS</span> (Brasil) para levar saúde bucal gratuita e formação prática a quem mais precisa.
             </motion.p>
 
             {/* Divisor ornamental */}
@@ -190,7 +190,7 @@ export function Projeto() {
               Visão de futuro
             </h3>
             <p className="text-grayui mb-8 leading-relaxed">
-              Ampliar o alcance do projeto, fortalecer parcerias institucionais e consolidar o ITBSS como referência em saúde bucal itinerante e cooperação internacional, garantindo sua sustentabilidade e expansão contínua.
+              Expandir o alcance do ITBSS, fortalecer as parcerias existentes e chegar a mais comunidades. Com operação sustentável e crescimento consistente.
             </p>
             <ul className="space-y-4">
               {principios.map((item, i) => (

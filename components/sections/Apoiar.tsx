@@ -89,7 +89,7 @@ export function Apoiar() {
           <span className="inline-block mb-5 px-4 py-1.5 rounded-full border border-primary-200 bg-primary-50 text-primary-600 text-sm font-semibold tracking-wide uppercase">Como Apoiar</span>
           <h2 className="text-h1 font-heading font-black text-grafite mb-4">Parcerias que garantem continuidade, qualidade e escala.</h2>
           <p className="text-grayui text-lg leading-relaxed">
-            Para manter e expandir o ITBSS, buscamos parceiros comprometidos com impacto social, saúde e inclusão. O apoio fortalece a capacidade operacional do projeto, amplia os atendimentos e viabiliza formação local.
+            Para manter e expandir o ITBSS, buscamos parceiros com interesse genuíno em saúde pública e inclusão social. O apoio vai direto para custeio das missões, insumos e formação local.
           </p>
         </div>
 

@@ -8,7 +8,7 @@ import { FileText, Download, ShieldCheck } from "lucide-react";
 const docs = [
   {
     title: "Estatuto Social do ITBSS",
-    desc: "Documento oficial que rege as atividades do Instituto Teuto-Brasileiro para Saúde Social, com sua finalidade social e humanitária.",
+    desc: "Documento que define a estrutura, finalidade e normas do Instituto Teuto-Brasileiro para Saúde Social.",
     tag: "Institucional",
     tagColor: "bg-primary-50 text-primary-600 border-primary-100",
     icon: <FileText className="w-7 h-7" />,
@@ -17,7 +17,7 @@ const docs = [
   },
   {
     title: "Certificado/registro CRO-BA",
-    desc: "Registro regular junto ao Conselho Regional de Odontologia da Bahia, reforçando a segurança e responsabilidade técnica do projeto.",
+    desc: "Registro ativo junto ao Conselho Regional de Odontologia da Bahia, que confirma a regularidade técnica das atividades.",
     tag: "Regulatório",
     tagColor: "bg-green-50 text-green-600 border-green-100",
     icon: <ShieldCheck className="w-7 h-7" />,

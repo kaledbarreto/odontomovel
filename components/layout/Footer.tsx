@@ -275,7 +275,7 @@ export function Footer() {
       {/* LGPD Modal */}
       <Modal isOpen={modalContent === "lgpd"} closeModal={closeModal} title="Política de Privacidade (LGPD)">
         <div className="space-y-4 text-sm text-grayui leading-relaxed">
-          <p>O ITBSS está comprometido com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+          <p>O ITBSS respeita seus dados pessoais e segue as regras da Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
           <p>Coletamos nome, e-mail e telefone através de formulários apenas para fins de contato, processo seletivo de voluntariado ou parcerias institucionais.</p>
           <p>Seus dados não são vendidos ou compartilhados com terceiros para fins comerciais.</p>
           <p>Ao enviar qualquer formulário neste site, você concorda com o uso dos seus dados para retorno de contato conforme descrito nesta política.</p>

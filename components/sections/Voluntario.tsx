@@ -107,10 +107,10 @@ export function Voluntario() {
               Seja Voluntário
             </span>
             <h2 className="text-h1 font-heading font-black text-white leading-tight mb-6">
-              Profissionais que doam tempo, técnica e cuidado — com impacto real.
+              Profissionais que dedicam tempo e técnica às missões do ITBSS.
             </h2>
             <p className="text-primary-100 mb-10 text-lg leading-relaxed">
-              O ITBSS conta com a força de profissionais comprometidos com a saúde e com o social. Buscamos dentistas e colaboradores que queiram contribuir com atendimento humanizado e organizado em missões e ações.
+              O ITBSS funciona com profissionais comprometidos com a saúde e com o social. Buscamos dentistas e colaboradores que queiram participar de missões organizadas, com protocolos claros e efeito real em comunidades vulneráveis.
             </p>
 
             <h3 className="text-white text-xl font-heading font-bold mb-5">Quem pode ser voluntário</h3>

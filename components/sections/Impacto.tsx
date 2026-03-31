@@ -121,7 +121,7 @@ export function Impacto() {
             Impacto que se mede em sorrisos — e em oportunidades.
           </h2>
           <p className="text-lg text-primary-300 leading-relaxed">
-            O impacto do ITBSS vai além do consultório. A cada ciclo, levamos atendimento odontológico, prevenção e mobilização social. E, quando formamos pessoas do território, fortalecemos também a autonomia e o futuro profissional local.
+            O ITBSS não é só atendimento clínico. A cada ciclo, levamos prevenção, mobilização e formação. Quem passa pelo programa sai com mais do que um tratamento no dente.
           </p>
         </motion.div>
 

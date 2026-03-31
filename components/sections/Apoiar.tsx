@@ -46,10 +46,10 @@ const modelos = [
   },
   {
     title: "Logística e manutenção",
-    icon: <Truck className="w-8 h-8 text-amber-600" />,
+    icon: <Truck className="w-8 h-8 text-yellow-600" />,
     desc: "Apoio com transporte, combustível e manutenção mecânica da unidade.",
-    accent: "from-amber-500 to-amber-600",
-    iconBg: "bg-amber-50",
+    accent: "from-yellow-500 to-yellow-600",
+    iconBg: "bg-yellow-50",
     tag: "Operacional",
   },
   {
@@ -63,7 +63,7 @@ const modelos = [
   {
     title: "Parcerias públicas",
     icon: <Users className="w-8 h-8 text-primary-600" />,
-    desc: "Secretarias, prefeituras e rede de saúde que desejam levar o Odontomóvel.",
+    desc: "Secretarias, prefeituras e rede de saúde que desejam levar o ITBSS.",
     accent: "from-primary-600 to-primary-800",
     iconBg: "bg-primary-50",
     tag: "Governança",
@@ -89,7 +89,7 @@ export function Apoiar() {
           <span className="inline-block mb-5 px-4 py-1.5 rounded-full border border-primary-200 bg-primary-50 text-primary-600 text-sm font-semibold tracking-wide uppercase">Como Apoiar</span>
           <h2 className="text-h1 font-heading font-black text-grafite mb-4">Parcerias que garantem continuidade, qualidade e escala.</h2>
           <p className="text-grayui text-lg leading-relaxed">
-            Para manter e expandir o Odontomóvel, buscamos parceiros comprometidos com impacto social, saúde e inclusão. O apoio fortalece a capacidade operacional do projeto, amplia os atendimentos e viabiliza formação local.
+            Para manter e expandir o ITBSS, buscamos parceiros comprometidos com impacto social, saúde e inclusão. O apoio fortalece a capacidade operacional do projeto, amplia os atendimentos e viabiliza formação local.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export function Apoiar() {
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
             className="relative overflow-hidden rounded-2xl sm:col-span-2 lg:col-span-1"
-            style={{ background: "linear-gradient(135deg, #1F5E99 0%, #153E6A 100%)" }}
+            style={{ background: "linear-gradient(135deg, #284679 0%, #1B3050 100%)" }}
           >
             <div className="h-1 w-full bg-gradient-to-r from-green-400 to-green-500" />
             <div className="p-8">
@@ -157,7 +157,7 @@ export function Apoiar() {
           {submitted ? (
             <div className="text-center py-10">
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-              <p className="text-xl font-semibold text-grafite">Recebemos seu interesse em apoiar o Odontomóvel.</p>
+              <p className="text-xl font-semibold text-grafite">Recebemos seu interesse em apoiar o ITBSS.</p>
               <p className="text-grayui mt-2">Em breve entraremos em contato com os próximos passos.</p>
             </div>
           ) : (

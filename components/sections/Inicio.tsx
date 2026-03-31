@@ -22,17 +22,17 @@ export function Inicio() {
         id="inicio"
         ref={heroRef}
         className="relative min-h-screen flex flex-col overflow-hidden"
-        style={{ background: "linear-gradient(160deg, #0A1C30 0%, #0F2D4C 40%, #153E6A 70%, #1A5088 100%)" }}
+        style={{ background: "linear-gradient(160deg, #0C1625 0%, #13233A 40%, #1B3050 70%, #223C67 100%)" }}
       >
         {/* Background blobs */}
         <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-0">
           <div
             className="absolute -top-32 -right-32 w-[700px] h-[700px] rounded-full opacity-20"
-            style={{ background: "radial-gradient(circle, #1FAF7A 0%, transparent 65%)" }}
+            style={{ background: "radial-gradient(circle, #4DAD75 0%, transparent 65%)" }}
           />
           <div
             className="absolute -bottom-40 -left-20 w-[600px] h-[600px] rounded-full opacity-10"
-            style={{ background: "radial-gradient(circle, #1F5E99 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, #284679 0%, transparent 70%)" }}
           />
         </motion.div>
 
@@ -57,9 +57,9 @@ export function Inicio() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-green-400/30 bg-green-500/10"
+                  className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-yellow-500/40 bg-yellow-500/10"
                 >
-                  <span className="text-green-400 text-xs font-bold uppercase tracking-widest">Saúde Bucal Gratuita · Brasil</span>
+                  <span className="text-yellow-400 text-xs font-bold uppercase tracking-widest">Saúde Bucal Gratuita · Brasil</span>
                 </motion.div>
 
                 {/* Headline */}
@@ -70,9 +70,9 @@ export function Inicio() {
                   className="font-heading font-black leading-[1.05] tracking-tight mb-8 text-white"
                   style={{ fontSize: "clamp(2.4rem, 5vw, 4.2rem)" }}
                 >
-                  Odontomóvel:{" "}
+                  ITBSS:{" "}
                   <span style={{
-                    background: "linear-gradient(90deg, #1FAF7A 0%, #3DC98D 100%)",
+                    background: "linear-gradient(90deg, #4DAD75 0%, #52BC84 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -146,7 +146,7 @@ export function Inicio() {
                 <div className="flex flex-col gap-3">
                   <PhotoSlot
                     dark
-                    label="O Odontomóvel em ação"
+                    label="O ITBSS em ação"
                     className="flex-[1.6]"
                   />
                   <PhotoSlot
@@ -195,12 +195,12 @@ export function Inicio() {
 
         <div
           className="pointer-events-none absolute bottom-0 left-0 right-0 h-32"
-          style={{ background: "linear-gradient(to bottom, transparent, #0A1C30)" }}
+          style={{ background: "linear-gradient(to bottom, transparent, #0C1625)" }}
         />
       </section>
 
       {/* ── O QUE FAZEMOS — 3 cards ─────────────────────────────── */}
-      <section className="relative pt-16 pb-0 bg-[#0A1C30] overflow-hidden">
+      <section className="relative pt-16 pb-0 bg-[#0C1625] overflow-hidden">
         <Container className="relative z-10 pb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

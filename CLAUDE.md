@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Odontomóvel** is a single-page landing site for a Brazilian social dental health project ("consultório sobre rodas" — a mobile dental clinic). Cooperation between **AZB-Plus (Germany)** and **ITBSS (Brazil)**. Language: **pt-BR**.
+**ITBSS** is a single-page landing site for a Brazilian social dental health project ("consultório sobre rodas" — a mobile dental clinic). Cooperation between **AZB-Plus (Germany)** and **ITBSS (Brazil)**. Language: **pt-BR**.
 
 **Creative concept:** *"Cuidado que chega até onde falta."*
 **Feel:** confiável, humano, limpo, eficiente, acolhedor.
@@ -60,13 +60,13 @@ The `tailwind.config.ts` must reflect these tokens exactly:
 
 | Token | Hex | Usage |
 |---|---|---|
-| `primary` (Azul Saúde) | `#1F5E99` | Header, primary buttons, links, highlights |
-| `green` / `success` (Verde Cuidado) | `#1FAF7A` | Impact icons, seals, success states |
+| `primary` (Azul Saúde) | `#284679` | Header, primary buttons, links, highlights |
+| `green` / `success` (Verde Cuidado) | `#4DAD75` | Impact icons, seals, success states |
 | `gray-900` / text (Grafite) | `#101828` | Titles and main text |
 | `gray-500` (Cinza Neutro) | `#667085` | Secondary text, captions |
 | `gray-100` (Cinza Claro) | `#F2F4F7` | Alternating section backgrounds, cards, FAQ blocks |
-| `white` | `#FFFFFF` | Base background |
-| `warning` | `#F79009` | Attention states |
+| `white` | `#FEFEFE` | Base background |
+| `yellow` / `warning` | `#F7CF4A` | Attention states, highlights |
 | `error` | `#D92D20` | Error states |
 | `border` | `#D0D5DD` | Borders and dividers |
 
@@ -117,7 +117,7 @@ Icon mapping per section:
 
 ### Hero (Início)
 
-**Título:** Odontomóvel: saúde bucal gratuita onde ela é mais necessária.
+**Título:** ITBSS: saúde bucal gratuita onde ela é mais necessária.
 
 **Subtítulo:** Um consultório odontológico sobre rodas que leva atendimento, prevenção e formação de mão de obra local para comunidades em situação de vulnerabilidade no Brasil.
 
@@ -140,7 +140,7 @@ Icon mapping per section:
 
 **H1:** Impacto que se mede em sorrisos — e em oportunidades.
 
-**Texto:** O impacto do Odontomóvel vai além do consultório. A cada ciclo, levamos atendimento odontológico, prevenção e mobilização social. E, quando formamos pessoas do território, fortalecemos também a autonomia e o futuro profissional local.
+**Texto:** O impacto do ITBSS vai além do consultório. A cada ciclo, levamos atendimento odontológico, prevenção e mobilização social. E, quando formamos pessoas do território, fortalecemos também a autonomia e o futuro profissional local.
 
 **Blocos de números** (placeholders para dados reais):
 - +X atendimentos realizados
@@ -149,7 +149,7 @@ Icon mapping per section:
 - XX voluntários mobilizados (Brasil / Alemanha)
 - XX pessoas capacitadas (ASB)
 
-Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já passou + depoimentos (morador, voluntário, coordenação).
+Incluir: **mapa interativo** (react-leaflet) com pontos onde o ITBSS já passou + depoimentos (morador, voluntário, coordenação).
 
 **CTA:** "Quero apoiar para ampliar esse impacto"
 
@@ -157,7 +157,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 
 **H1:** Parcerias que garantem continuidade, qualidade e escala.
 
-**Texto:** Para manter e expandir o Odontomóvel, buscamos parceiros comprometidos com impacto social, saúde e inclusão. O apoio fortalece a capacidade operacional do projeto, amplia os atendimentos e viabiliza formação local.
+**Texto:** Para manter e expandir o ITBSS, buscamos parceiros comprometidos com impacto social, saúde e inclusão. O apoio fortalece a capacidade operacional do projeto, amplia os atendimentos e viabiliza formação local.
 
 **Modelos de apoio (cards):**
 - Patrocínio institucional (cota anual ou por missão)
@@ -174,7 +174,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 
 **H1:** Profissionais que doam tempo, técnica e cuidado — com impacto real.
 
-**Texto:** O Odontomóvel conta com a força de profissionais comprometidos com a saúde e com o social. Buscamos dentistas e colaboradores que queiram contribuir com atendimento humanizado e organizado em missões e ações.
+**Texto:** O ITBSS conta com a força de profissionais comprometidos com a saúde e com o social. Buscamos dentistas e colaboradores que queiram contribuir com atendimento humanizado e organizado em missões e ações.
 
 **Quem pode:** Cirurgiões-dentistas | Auxiliares / TSB | Profissionais de apoio (triagem, logística, educação em saúde)
 
@@ -186,7 +186,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 
 **H1:** Formação prática local: inclusão produtiva dentro do próprio território.
 
-**Texto:** Durante a permanência do Odontomóvel na comunidade, realizamos uma formação prática de moradores interessados em atuar como auxiliares no apoio aos atendimentos e rotinas de biossegurança. A vivência acontece de forma aplicada, com acompanhamento da equipe.
+**Texto:** Durante a permanência do ITBSS na comunidade, realizamos uma formação prática de moradores interessados em atuar como auxiliares no apoio aos atendimentos e rotinas de biossegurança. A vivência acontece de forma aplicada, com acompanhamento da equipe.
 
 **Bloco "Importante":** O certificado emitido registra a participação e a formação prática realizada, e a instituição busca parcerias com instituições de ensino e/ou entidades habilitadas para apoiar a validação e o reconhecimento formal desse percurso formativo.
 
@@ -198,7 +198,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 
 **Propósito:** Levar saúde bucal a quem mais precisa, transformando realidades com cuidado, dignidade e presença direta nos territórios onde o acesso ainda não chega.
 
-**Posicionamento:** O Odontomóvel é uma iniciativa de impacto social que conecta Brasil e Alemanha por meio da saúde, do voluntariado e da formação local, atuando diretamente em comunidades em situação de vulnerabilidade com uma estrutura itinerante completa.
+**Posicionamento:** O ITBSS é uma iniciativa de impacto social que conecta Brasil e Alemanha por meio da saúde, do voluntariado e da formação local, atuando diretamente em comunidades em situação de vulnerabilidade com uma estrutura itinerante completa.
 
 **Pilares:**
 - **Saúde que transforma territórios** — Levamos atendimento odontológico gratuito e ações de prevenção diretamente às comunidades, reduzindo desigualdades no acesso à saúde.
@@ -206,7 +206,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 - **Formação que gera futuro** — Capacitamos moradores das próprias comunidades, criando oportunidades de desenvolvimento, autonomia e inserção no mercado de trabalho.
 - **Cooperação que amplia impacto** — Fortalecemos a parceria entre instituições brasileiras e alemãs, ampliando a capacidade de atuação e garantindo continuidade ao projeto.
 
-**Visão:** Ampliar o alcance do projeto, fortalecer parcerias institucionais e consolidar o Odontomóvel como referência em saúde bucal itinerante e cooperação internacional, garantindo sua sustentabilidade e expansão contínua.
+**Visão:** Ampliar o alcance do projeto, fortalecer parcerias institucionais e consolidar o ITBSS como referência em saúde bucal itinerante e cooperação internacional, garantindo sua sustentabilidade e expansão contínua.
 
 **Princípios:** Cuidado com respeito e humanidade | Ética e transparência nas ações | Compromisso com as comunidades atendidas | Uso responsável e eficiente dos recursos | Cooperação e espírito de voluntariado
 
@@ -220,7 +220,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 
 ### Contato
 
-**H1:** Fale com a equipe do Odontomóvel.
+**H1:** Fale com a equipe do ITBSS.
 
 **Texto:** Se você quer apoiar, ser voluntário, propor parceria pública ou educacional, preencha o formulário abaixo. Retornaremos o mais breve possível.
 
@@ -273,7 +273,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 ### Mensagens automáticas
 
 - **Sucesso (contato):** "Mensagem enviada com sucesso! Obrigado pelo contato. Nossa equipe responderá o mais breve possível."
-- **Sucesso (parceria):** "Recebemos seu interesse em apoiar o Odontomóvel. Em breve entraremos em contato com os próximos passos."
+- **Sucesso (parceria):** "Recebemos seu interesse em apoiar o ITBSS. Em breve entraremos em contato com os próximos passos."
 - **Sucesso (voluntário):** "Cadastro realizado! Obrigado por se disponibilizar. A equipe entrará em contato quando houver ações compatíveis."
 - **Erro genérico:** "Opa! Não foi possível enviar agora. Tente novamente em alguns minutos."
 - **Validações:** "Este campo é obrigatório." \| "Digite um e-mail válido." \| "Digite um telefone válido."
@@ -285,7 +285,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 **Botões principais:**
 - Quero apoiar
 - Quero ser voluntário(a)
-- Quero levar o Odontomóvel para minha cidade
+- Quero levar o ITBSS para minha cidade
 - Quero apoiar a Formação ASB
 - Baixar apresentação institucional
 - Falar com a equipe
@@ -298,7 +298,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 
 ## Footer
 
-**Texto:** Projeto Odontomóvel — AZB-Plus (Alemanha) e ITBSS (Brasil).
+**Texto:** Projeto ITBSS — AZB-Plus (Alemanha) e ITBSS (Brasil).
 **Contato:** [e-mail] | [WhatsApp]
 **Copyright:** © [Ano] ITBSS. Todos os direitos reservados.
 **Links obrigatórios:** Transparência | LGPD | Notícias / Atualizações | FAQ | Imprensa / Kit mídia | AZB-Plus (Alemanha) / ITBSS (Brasil)
@@ -316,10 +316,10 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 
 ## FAQ (16 perguntas — usar este texto exato)
 
-1. **O que é o Odontomóvel?** — É um consultório odontológico sobre rodas que realiza atendimentos gratuitos e ações educativas em saúde bucal, além de apoiar a formação prática local.
+1. **O que é o ITBSS?** — É um consultório odontológico sobre rodas que realiza atendimentos gratuitos e ações educativas em saúde bucal, além de apoiar a formação prática local.
 2. **Quem realiza o projeto?** — O projeto acontece em cooperação entre a AZB-Plus (Alemanha) e o ITBSS (Brasil), com apoio de voluntários e parceiros locais.
-3. **Em quais regiões o Odontomóvel atua?** — Em diferentes municípios/estados, conforme planejamento anual, parcerias e condições de operação.
-4. **O atendimento é realmente gratuito?** — Sim. O atendimento oferecido pelo Odontomóvel é gratuito para a população atendida, conforme organização local.
+3. **Em quais regiões o ITBSS atua?** — Em diferentes municípios/estados, conforme planejamento anual, parcerias e condições de operação.
+4. **O atendimento é realmente gratuito?** — Sim. O atendimento oferecido pelo ITBSS é gratuito para a população atendida, conforme organização local.
 5. **Quais tipos de procedimentos são realizados?** — Variam conforme estrutura e necessidade local, incluindo atendimentos clínicos e ações preventivas.
 6. **Como a comunidade é selecionada?** — Considera vulnerabilidade, falta de assistência e viabilidade de logística, em parceria com atores locais.
 7. **Como empresas e instituições podem apoiar?** — Via patrocínio, doação de insumos, apoio logístico/manutenção e apoio à Formação ASB.
@@ -330,7 +330,7 @@ Incluir: **mapa interativo** (react-leaflet) com pontos onde o Odontomóvel já 
 12. **O que é a Formação ASB e como funciona?** — Formação prática local durante a permanência do caminhão, com acompanhamento da equipe.
 13. **A certificação da Formação ASB tem validade legal?** — O certificado registra participação e prática; busca-se parceria com instituição habilitada para reconhecimento formal.
 14. **Como uma instituição de ensino pode apoiar a validação?** — Pode apoiar com trilha pedagógica complementar, validação conforme regras internas ou docência/mentoria.
-15. **Como entrar em contato para levar o Odontomóvel para minha cidade?** — Preencha o formulário e selecione essa opção, informando município/UF e possíveis parceiros.
+15. **Como entrar em contato para levar o ITBSS para minha cidade?** — Preencha o formulário e selecione essa opção, informando município/UF e possíveis parceiros.
 16. **Como acompanhar atualizações?** — Acompanhe redes sociais oficiais e a seção de Atualizações/Notícias do site.
 
 **FAQ UI:** accordion (abre/fecha), pergunta em negrito, resposta em texto leve, fundo `#F2F4F7`.

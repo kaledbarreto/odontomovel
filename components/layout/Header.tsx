@@ -35,7 +35,7 @@ export function Header() {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-3" : "bg-transparent py-4"}`}>
       <Container className="flex items-center justify-between">
         <Link to="inicio" smooth={true} duration={500} className={`cursor-pointer text-xl font-bold font-heading block shrink-0 transition-colors duration-300 ${scrolled ? "text-primary-600" : "text-white"}`}>
-          Odontomóvel
+          ITBSS
         </Link>
 
         {/* Desktop Nav */}

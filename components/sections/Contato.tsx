@@ -62,7 +62,7 @@ export function Contato() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-h1 font-heading font-black text-grafite mb-6"
             >
-              Fale com a equipe do Odontomóvel.
+              Fale com a equipe do ITBSS.
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 15 }}

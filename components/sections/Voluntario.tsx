@@ -65,12 +65,12 @@ export function Voluntario() {
     <Section
       id="voluntario"
       className="py-0 overflow-hidden relative"
-      style={{ background: "linear-gradient(150deg, #1A4F8A 0%, #1F5E99 40%, #0F3D5A 100%)" }}
+      style={{ background: "linear-gradient(150deg, #223C67 0%, #284679 40%, #162843 100%)" }}
     >
       {/* Decorative background blob */}
       <div
         className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-10"
-        style={{ background: "radial-gradient(circle, #1FAF7A 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #4DAD75 0%, transparent 70%)" }}
       />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.025]"
@@ -110,7 +110,7 @@ export function Voluntario() {
               Profissionais que doam tempo, técnica e cuidado — com impacto real.
             </h2>
             <p className="text-primary-100 mb-10 text-lg leading-relaxed">
-              O Odontomóvel conta com a força de profissionais comprometidos com a saúde e com o social. Buscamos dentistas e colaboradores que queiram contribuir com atendimento humanizado e organizado em missões e ações.
+              O ITBSS conta com a força de profissionais comprometidos com a saúde e com o social. Buscamos dentistas e colaboradores que queiram contribuir com atendimento humanizado e organizado em missões e ações.
             </p>
 
             <h3 className="text-white text-xl font-heading font-bold mb-5">Quem pode ser voluntário</h3>

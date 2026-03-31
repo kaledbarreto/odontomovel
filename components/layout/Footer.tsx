@@ -17,10 +17,10 @@ const navLinks = [
 ];
 
 const faqItems = [
-  { Q: "O que é o Odontomóvel?", A: "É um consultório odontológico sobre rodas que realiza atendimentos gratuitos e ações educativas em saúde bucal, além de apoiar a formação prática local." },
+  { Q: "O que é o ITBSS?", A: "É um consultório odontológico sobre rodas que realiza atendimentos gratuitos e ações educativas em saúde bucal, além de apoiar a formação prática local." },
   { Q: "Quem realiza o projeto?", A: "O projeto acontece em cooperação entre a AZB-Plus (Alemanha) e o ITBSS (Brasil), com apoio de voluntários e parceiros locais." },
-  { Q: "Em quais regiões o Odontomóvel atua?", A: "Em diferentes municípios/estados, conforme planejamento anual, parcerias e condições de operação." },
-  { Q: "O atendimento é realmente gratuito?", A: "Sim. O atendimento oferecido pelo Odontomóvel é gratuito para a população atendida, conforme organização local." },
+  { Q: "Em quais regiões o ITBSS atua?", A: "Em diferentes municípios/estados, conforme planejamento anual, parcerias e condições de operação." },
+  { Q: "O atendimento é realmente gratuito?", A: "Sim. O atendimento oferecido pelo ITBSS é gratuito para a população atendida, conforme organização local." },
   { Q: "Quais tipos de procedimentos são realizados?", A: "Variam conforme estrutura e necessidade local, incluindo atendimentos clínicos e ações preventivas." },
   { Q: "Como a comunidade é selecionada?", A: "Considera vulnerabilidade, falta de assistência e viabilidade de logística, em parceria com atores locais." },
   { Q: "Como empresas e instituições podem apoiar?", A: "Via patrocínio, doação de insumos, apoio logístico/manutenção e apoio à Formação ASB." },
@@ -31,7 +31,7 @@ const faqItems = [
   { Q: "O que é a Formação ASB e como funciona?", A: "Formação prática local durante a permanência do caminhão, com acompanhamento da equipe." },
   { Q: "A certificação da Formação ASB tem validade legal?", A: "O certificado registra participação e prática; busca-se parceria com instituição habilitada para reconhecimento formal." },
   { Q: "Como uma instituição de ensino pode apoiar a validação?", A: "Pode apoiar com trilha pedagógica complementar, validação conforme regras internas ou docência/mentoria." },
-  { Q: "Como entrar em contato para levar o Odontomóvel para minha cidade?", A: "Preencha o formulário e selecione essa opção, informando município/UF e possíveis parceiros." },
+  { Q: "Como entrar em contato para levar o ITBSS para minha cidade?", A: "Preencha o formulário e selecione essa opção, informando município/UF e possíveis parceiros." },
   { Q: "Como acompanhar atualizações e resultados do projeto?", A: "Acompanhe redes sociais oficiais e a seção de Atualizações/Notícias do site." },
 ];
 
@@ -72,7 +72,7 @@ export function Footer() {
               <div className="lg:col-span-1">
                 <div className="mb-4">
                   <span className="text-2xl font-heading font-bold text-white tracking-tight">
-                    Odontomóvel
+                    ITBSS
                   </span>
                 </div>
                 <p className="text-sm text-primary-300 leading-relaxed mb-6">
@@ -257,7 +257,7 @@ export function Footer() {
         <div className="space-y-3">
           <div className="p-4 border border-bordercolor rounded-xl hover:bg-graylight transition-colors cursor-pointer">
             <p className="text-xs text-grayui mb-1">20 de março de 2026</p>
-            <h4 className="font-semibold text-grafite">Nova rota do Odontomóvel em Salvador</h4>
+            <h4 className="font-semibold text-grafite">Nova rota do ITBSS em Salvador</h4>
           </div>
           <div className="p-4 border border-bordercolor rounded-xl hover:bg-graylight transition-colors cursor-pointer">
             <p className="text-xs text-grayui mb-1">10 de fevereiro de 2026</p>
@@ -272,7 +272,7 @@ export function Footer() {
       {/* LGPD Modal */}
       <Modal isOpen={modalContent === "lgpd"} closeModal={closeModal} title="Política de Privacidade (LGPD)">
         <div className="space-y-4 text-sm text-grayui leading-relaxed">
-          <p>O Instituto Odontomóvel está comprometido com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+          <p>O ITBSS está comprometido com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
           <p>Coletamos nome, e-mail e telefone através de formulários apenas para fins de contato, processo seletivo de voluntariado ou parcerias institucionais.</p>
           <p>Seus dados não são vendidos ou compartilhados com terceiros para fins comerciais.</p>
           <p>Ao enviar qualquer formulário neste site, você concorda com o uso dos seus dados para retorno de contato conforme descrito nesta política.</p>
@@ -291,7 +291,7 @@ export function Footer() {
             className="flex items-center gap-3 p-4 border border-bordercolor rounded-xl hover:bg-graylight transition-colors group"
           >
             <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F5E99" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#284679" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </div>
             <div>
               <h4 className="font-semibold text-grafite group-hover:text-primary-600 transition-colors">Kit de Logos (ZIP)</h4>
@@ -303,7 +303,7 @@ export function Footer() {
             className="flex items-center gap-3 p-4 border border-bordercolor rounded-xl hover:bg-graylight transition-colors group"
           >
             <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F5E99" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#284679" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </div>
             <div>
               <h4 className="font-semibold text-grafite group-hover:text-primary-600 transition-colors">Release de Imprensa (PDF)</h4>

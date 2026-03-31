@@ -36,7 +36,7 @@ export function Transparencia() {
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: "radial-gradient(circle, #1F5E99 1.5px, transparent 1.5px)",
+            backgroundImage: "radial-gradient(circle, #284679 1.5px, transparent 1.5px)",
             backgroundSize: "40px 40px",
           }}
         />
@@ -117,9 +117,9 @@ export function Transparencia() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="relative overflow-hidden rounded-2xl max-w-3xl mx-auto"
-          style={{ background: "linear-gradient(135deg, #EBF2FA 0%, #EAFAF3 100%)" }}
+          style={{ background: "linear-gradient(135deg, #EEF1F7 0%, #EDF7F2 100%)" }}
         >
-          <div className="h-1 w-full bg-gradient-to-r from-primary-500 via-green-500 to-primary-500" />
+          <div className="h-1 w-full bg-gradient-to-r from-primary-500 via-yellow-500 to-green-500" />
           <div className="p-8 md:p-10">
             <p className="text-center text-sm font-bold uppercase tracking-widest text-primary-500 mb-8">
               Credenciais institucionais verificadas

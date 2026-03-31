@@ -65,7 +65,7 @@ const stats = [
 
 const depoimentos = [
   {
-    text: "O Odontomóvel não trouxe apenas dentistas, trouxe esperança pra nossa comunidade quando a gente mais precisava.",
+    text: "O ITBSS não trouxe apenas dentistas, trouxe esperança pra nossa comunidade quando a gente mais precisava.",
     author: "Moradora Atendida",
     role: "Salvador, BA",
   },
@@ -94,11 +94,11 @@ export function Impacto() {
     <Section
       id="impacto"
       className="relative overflow-hidden py-0"
-      style={{ background: "linear-gradient(160deg, #0A1C30 0%, #0F2D4C 50%, #153E6A 100%)" }}
+      style={{ background: "linear-gradient(160deg, #0C1625 0%, #13233A 50%, #1B3050 100%)" }}
     >
       <div
         className="pointer-events-none absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-15"
-        style={{ background: "radial-gradient(circle, #1FAF7A 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #4DAD75 0%, transparent 70%)" }}
       />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -121,7 +121,7 @@ export function Impacto() {
             Impacto que se mede em sorrisos — e em oportunidades.
           </h2>
           <p className="text-lg text-primary-300 leading-relaxed">
-            O impacto do Odontomóvel vai além do consultório. A cada ciclo, levamos atendimento odontológico, prevenção e mobilização social. E, quando formamos pessoas do território, fortalecemos também a autonomia e o futuro profissional local.
+            O impacto do ITBSS vai além do consultório. A cada ciclo, levamos atendimento odontológico, prevenção e mobilização social. E, quando formamos pessoas do território, fortalecemos também a autonomia e o futuro profissional local.
           </p>
         </motion.div>
 
@@ -149,7 +149,7 @@ export function Impacto() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 h-[320px] md:h-[260px]">
             <PhotoSlot
               dark
-              label="Odontomóvel em missão"
+              label="ITBSS em missão"
               className="col-span-2 row-span-1 h-full"
             />
             <PhotoSlot dark label="Atendimento clínico" className="h-full" />
@@ -177,7 +177,7 @@ export function Impacto() {
             className="flex flex-col gap-6"
           >
             <div>
-              <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">Onde o Odontomóvel já esteve</h3>
+              <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">Onde o ITBSS já esteve</h3>
               <p className="text-primary-300 leading-relaxed">
                 Atuando em diferentes municípios/estados, conforme planejamento anual, parcerias e condições de operação.
               </p>
@@ -201,7 +201,7 @@ export function Impacto() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="relative rounded-2xl overflow-hidden border border-white/10"
-            style={{ background: "linear-gradient(145deg, rgba(31,175,122,0.1) 0%, rgba(15,45,76,0.8) 60%)" }}
+            style={{ background: "linear-gradient(145deg, rgba(77,173,117,0.1) 0%, rgba(19,35,58,0.8) 60%)" }}
           >
             <div className="absolute top-6 right-6 opacity-10">
               <Quote className="w-24 h-24 text-green-400" />
@@ -269,7 +269,7 @@ export function Impacto() {
 
       <style jsx global>{`
         .swiper-bullet-impacto { display: inline-block; width: 8px; height: 8px; border-radius: 9999px; background: rgba(255,255,255,0.25); margin: 0 4px; cursor: pointer; transition: all 0.3s; }
-        .swiper-bullet-impacto-active { background: #1FAF7A; width: 24px; }
+        .swiper-bullet-impacto-active { background: #4DAD75; width: 24px; }
       `}</style>
     </Section>
   );

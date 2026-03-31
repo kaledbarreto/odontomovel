@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Odontomóvel | Saúde bucal gratuita",
+  title: "ITBSS | Saúde bucal gratuita",
   description: "Consultório sobre rodas levando saúde bucal para quem mais precisa. Projeto de cooperação AZB-Plus e ITBSS.",
 };
 

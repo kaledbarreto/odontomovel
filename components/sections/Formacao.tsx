@@ -45,7 +45,7 @@ export function Formacao() {
               Formação prática local: inclusão produtiva dentro do próprio território.
             </h2>
             <p className="text-lg text-grayui leading-relaxed mb-8">
-              Durante a permanência do Odontomóvel na comunidade, realizamos uma formação prática de
+              Durante a permanência do ITBSS na comunidade, realizamos uma formação prática de
               moradores interessados em atuar como auxiliares no apoio aos atendimentos e rotinas de
               biossegurança. A vivência acontece de forma aplicada, com acompanhamento da equipe.
             </p>
@@ -86,7 +86,7 @@ export function Formacao() {
               {/* Header bar */}
               <div
                 className="h-3 w-full"
-                style={{ background: "linear-gradient(90deg, #1F5E99, #1FAF7A)" }}
+                style={{ background: "linear-gradient(90deg, #284679, #F7CF4A, #4DAD75)" }}
               />
 
               <div className="p-8 md:p-10 text-center">
@@ -103,7 +103,7 @@ export function Formacao() {
                   Certificado de Participação
                 </h3>
                 <div className="text-sm text-grayui mb-6">
-                  Auxiliar em Saúde Bucal — Programa Odontomóvel
+                  Auxiliar em Saúde Bucal — Programa ITBSS
                 </div>
 
                 {/* Decorative lines */}

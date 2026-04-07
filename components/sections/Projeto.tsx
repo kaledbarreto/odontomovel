@@ -54,7 +54,7 @@ export function Projeto() {
           {/* Camada de foto — troque por <Image> quando tiver o arquivo real */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/projeto-hero.jpeg')" }}
+            style={{ backgroundImage: "url('/images/project01.JPG')" }}
           />
 
           {/* Overlay artístico em gradiente */}

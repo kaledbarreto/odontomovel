@@ -16,6 +16,7 @@ const steps = [
     iconBg: "bg-primary-50",
     iconColor: "text-primary-500",
     bar: "bg-primary-500",
+    photoSrc: "/images/metodology01.JPG",
     photoLabel: "Reconhecimento do território",
   },
   {
@@ -27,6 +28,7 @@ const steps = [
     iconBg: "bg-green-50",
     iconColor: "text-green-600",
     bar: "bg-green-500",
+    photoSrc: "/images/metodology02.JPG",
     photoLabel: "O caminhão instalado na comunidade",
   },
   {
@@ -160,7 +162,9 @@ export function ComoFunciona() {
             >
               {/* Photo area */}
               <PhotoSlot
-                label={step.photoLabel}
+                src={step.photoSrc}
+                alt={step.photoLabel}
+                label={step.photoSrc ? undefined : step.photoLabel}
                 className="w-full h-40 rounded-none rounded-t-2xl"
               />
               <div className="relative z-10 p-7">

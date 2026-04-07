@@ -145,26 +145,26 @@ export function Inicio() {
                 {/* Tall left column */}
                 <div className="flex flex-col gap-3">
                   <PhotoSlot
-                    dark
-                    label="O ITBSS em ação"
+                    src="/images/hero01.JPG"
+                    alt="O ITBSS em ação"
                     className="flex-[1.6]"
                   />
                   <PhotoSlot
-                    dark
-                    label="Atendimento comunitário"
+                    src="/images/hero02.JPG"
+                    alt="Atendimento comunitário"
                     className="flex-1"
                   />
                 </div>
                 {/* Right column offset */}
                 <div className="flex flex-col gap-3 mt-10">
                   <PhotoSlot
-                    dark
-                    label="Equipe de voluntários"
+                    src="/images/hero03.JPG"
+                    alt="Equipe de voluntários"
                     className="flex-1"
                   />
                   <PhotoSlot
-                    dark
-                    label="Formação ASB"
+                    src="/images/hero04.JPG"
+                    alt="Formação ASB"
                     className="flex-[1.4]"
                   />
                 </div>
@@ -219,18 +219,22 @@ export function Inicio() {
                 icon: <Stethoscope className="w-8 h-8 text-green-400" />,
                 title: "Atendimento odontológico gratuito",
                 desc: "Levamos procedimentos e cuidados essenciais para quem tem pouco ou nenhum acesso a serviços odontológicos.",
+                photoSrc: "/images/whatWeDo01.JPG",
                 photoLabel: "Atendimento odontológico",
               },
               {
                 icon: <HeartHandshake className="w-8 h-8 text-green-400" />,
                 title: "Voluntariado profissional",
                 desc: "Dentistas e profissionais de saúde participam de missões organizadas, com protocolos claros e resultados documentados.",
+                photoSrc: "/images/whatWeDo02.JPG",
+                photoPosition: "center 25%",
                 photoLabel: "Equipe voluntária em missão",
               },
               {
                 icon: <BookOpen className="w-8 h-8 text-green-400" />,
                 title: "Formação local (ASB)",
                 desc: "Durante a permanência do caminhão, treinamos moradores como auxiliares de saúde bucal. Eles ganham qualificação prática e novas possibilidades de trabalho.",
+                photoSrc: "/images/WhatWeDo03.JPG",
                 photoLabel: "Formação de moradores ASB",
               },
             ].map((card, idx) => (
@@ -245,8 +249,9 @@ export function Inicio() {
               >
                 {/* Photo area */}
                 <PhotoSlot
-                  dark
-                  label={card.photoLabel}
+                  src={card.photoSrc}
+                  alt={card.photoLabel}
+                  objectPosition={card.photoPosition ?? "center"}
                   className="w-full h-44 rounded-none rounded-t-2xl"
                 />
                 {/* Text */}

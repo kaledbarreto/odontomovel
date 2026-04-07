@@ -148,17 +148,17 @@ export function Impacto() {
           {/* Mosaic: 1 wide + 4 smaller */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 h-[320px] md:h-[260px]">
             <PhotoSlot
-              dark
-              label="ITBSS em missão"
+              src="/images/impact01.JPG"
+              alt="ITBSS em missão"
               className="col-span-2 row-span-1 h-full"
             />
-            <PhotoSlot dark label="Atendimento clínico" className="h-full" />
-            <PhotoSlot dark label="Comunidade atendida" className="h-full" />
+            <PhotoSlot src="/images/impact02.JPG" alt="Atendimento clínico" className="h-full" />
+            <PhotoSlot src="/images/impact03.JPG" alt="Comunidade atendida" className="h-full" />
           </div>
           <div className="grid grid-cols-3 gap-3 mt-3">
-            <PhotoSlot dark label="Equipe de voluntários" className="h-40" />
-            <PhotoSlot dark label="Prevenção e educação" className="h-40" />
-            <PhotoSlot dark label="Formação ASB em campo" className="h-40" />
+            <PhotoSlot src="/images/impact04.JPG" alt="Equipe de voluntários" className="h-40" />
+            <PhotoSlot src="/images/impact05.JPG" alt="Prevenção e educação" className="h-40" />
+            <PhotoSlot src="/images/impact06.JPG" alt="Formação ASB em campo" className="h-40" />
           </div>
         </motion.div>
 

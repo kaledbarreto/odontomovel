@@ -93,13 +93,13 @@ export function Voluntario() {
               className="grid grid-cols-3 gap-3 mb-10"
             >
               <PhotoSlot
-                dark
-                label="Missão em campo"
+                src="/images/voluntary01.JPG"
+                alt="Missão em campo"
                 className="col-span-2 h-44"
               />
               <div className="flex flex-col gap-3">
-                <PhotoSlot dark label="Equipe voluntária" className="flex-1" />
-                <PhotoSlot dark label="Dentista em ação" className="flex-1" />
+                <PhotoSlot src="/images/voluntary02.JPG" alt="Equipe voluntária" className="flex-1" />
+                <PhotoSlot src="/images/voluntary03.JPG" alt="Dentista em ação" className="flex-1" />
               </div>
             </motion.div>
 

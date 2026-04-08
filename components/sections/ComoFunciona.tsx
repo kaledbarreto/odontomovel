@@ -40,6 +40,7 @@ const steps = [
     iconBg: "bg-yellow-50",
     iconColor: "text-yellow-600",
     bar: "bg-yellow-500",
+    photoSrc: "/images/01.jpg",
     photoLabel: "Ação educativa com a comunidade",
   },
   {
@@ -51,6 +52,7 @@ const steps = [
     iconBg: "bg-green-50",
     iconColor: "text-green-600",
     bar: "bg-green-500",
+    photoSrc: "/images/02.JPG",
     photoLabel: "Treinamento prático de moradores",
   },
 ];

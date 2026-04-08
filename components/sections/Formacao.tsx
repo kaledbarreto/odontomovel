@@ -24,9 +24,9 @@ export function Formacao() {
           transition={{ duration: 0.7 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14"
         >
-          <PhotoSlot label="Aula prática com moradores" className="h-56" />
-          <PhotoSlot label="Biossegurança e rotinas clínicas" className="h-56" />
-          <PhotoSlot label="Entrega de certificados" className="h-56" />
+          <PhotoSlot src="/images/03.JPG" alt="Aula prática com moradores" className="h-56" />
+          <PhotoSlot src="/images/04.JPG" alt="Biossegurança e rotinas clínicas" className="h-56" />
+          <PhotoSlot src="/images/05.JPG" alt="Entrega de certificados" className="h-56" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 xl:gap-20 items-center">
@@ -77,7 +77,8 @@ export function Formacao() {
           >
             {/* Photo area */}
             <PhotoSlot
-              label="Formação prática: morador aprendendo em campo"
+              src="/images/06.JPG"
+              alt="Formação prática: morador aprendendo em campo"
               className="w-full h-56 rounded-2xl"
             />
 

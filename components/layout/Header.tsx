@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
@@ -36,8 +37,15 @@ export function Header() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-3" : "bg-transparent py-4"}`}>
       <Container className="flex items-center justify-between">
-        <Link to="inicio" smooth={true} duration={500} className={`cursor-pointer text-xl font-bold font-heading block shrink-0 transition-colors duration-300 ${scrolled ? "text-primary-600" : "text-white"}`}>
-          ITBSS
+        <Link to="inicio" smooth={true} duration={500} className="cursor-pointer block shrink-0">
+          <Image
+            src="/images/logo.png"
+            alt="ITBSS"
+            width={200}
+            height={64}
+            className="h-14 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

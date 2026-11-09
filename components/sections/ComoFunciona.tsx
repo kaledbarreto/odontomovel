@@ -45,8 +45,8 @@ const steps = [
   },
   {
     num: "04",
-    title: "Formação prática de moradores (ASB)",
-    desc: "Moradores da comunidade podem ser treinados como auxiliares durante o período de atuação, recebendo certificado de participação.",
+    title: "Prática gratuita para formandos em ASB",
+    desc: "O Consultório Móvel é oportunidade de Prática Gratuita para Formandos em ASB concluírem sua certificação com a Carga Horária exigida pelas instituições formadoras.",
     icon: <Users className="w-6 h-6" />,
     accent: "border-green-200",
     iconBg: "bg-green-50",
@@ -134,7 +134,7 @@ export function ComoFunciona() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="text-white/70 text-lg md:text-xl max-w-2xl leading-relaxed"
             >
-              Cada ciclo vai além do atendimento clínico: o caminhão fica no território, cuida das pessoas e forma quem vive lá.
+              Cada ciclo vai além do atendimento clínico: o caminhão fica no território, cuida das pessoas e abre espaço de prática para formandos em ASB.
             </motion.p>
 
             <motion.div
@@ -232,7 +232,7 @@ export function ComoFunciona() {
                 </span>
               </p>
               <p className="text-primary-300 max-w-2xl leading-relaxed">
-                O caminhão fica por um período no território, atende a população, realiza ações educativas e apoia a formação local. Depois segue para uma nova região.
+                O caminhão fica por um período no território, atende a população, realiza ações educativas e oferece prática para formandos em ASB. Depois segue para uma nova região.
               </p>
             </div>
           </div>

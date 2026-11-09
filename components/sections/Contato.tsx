@@ -77,8 +77,8 @@ export function Contato() {
             {/* Contact channels */}
             <div className="space-y-3 mb-10">
               {[
-                { icon: <Mail className="w-5 h-5" />, label: "E-mail oficial", value: "contato@odontomovel.org", bg: "bg-primary-50", color: "text-primary-600", border: "border-primary-100" },
-                { icon: <MessageCircle className="w-5 h-5" />, label: "WhatsApp", value: "A combinar com a equipe", bg: "bg-green-50", color: "text-green-600", border: "border-green-100" },
+                { icon: <Mail className="w-5 h-5" />, label: "E-mail oficial", value: "institutotbss@gmail.com", bg: "bg-primary-50", color: "text-primary-600", border: "border-primary-100" },
+                { icon: <MessageCircle className="w-5 h-5" />, label: "WhatsApp", value: "(71) 98215-4401", bg: "bg-green-50", color: "text-green-600", border: "border-green-100" },
                 { icon: <Clock className="w-5 h-5" />, label: "Tempo de resposta", value: "Em até 48 horas úteis", bg: "bg-gray-50", color: "text-gray-500", border: "border-gray-200" },
               ].map((c, i) => (
                 <motion.div

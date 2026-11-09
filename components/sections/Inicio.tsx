@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-scroll";
-import { ArrowDown, HeartHandshake, Stethoscope, BookOpen, ChevronRight } from "lucide-react";
+import { ArrowDown, HeartHandshake, Stethoscope, BookOpen, ChevronRight, Smile } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { PhotoSlot } from "@/components/ui/PhotoSlot";
@@ -120,9 +120,9 @@ export function Inicio() {
                   className="flex flex-wrap gap-3"
                 >
                   {[
-                    { icon: <Stethoscope className="w-4 h-4" />, value: "+X", label: "Atendimentos" },
-                    { icon: <HeartHandshake className="w-4 h-4" />, value: "XX", label: "Voluntários" },
-                    { icon: <BookOpen className="w-4 h-4" />, value: "XX", label: "Formados ASB" },
+                    { icon: <Stethoscope className="w-4 h-4" />, value: "+56 mil", label: "Pacientes atendidos" },
+                    { icon: <Smile className="w-4 h-4" />, value: "+177 mil", label: "Procedimentos odontológicos" },
+                    { icon: <HeartHandshake className="w-4 h-4" />, value: "+800", label: "Dentistas voluntários (BRA/ALE)" },
                   ].map((stat, i) => (
                     <div key={i} className="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
                       <span className="text-green-400">{stat.icon}</span>
@@ -217,14 +217,14 @@ export function Inicio() {
             {[
               {
                 icon: <Stethoscope className="w-8 h-8 text-green-400" />,
-                title: "Atendimento odontológico gratuito",
+                title: "Atendimento Odontológico Gratuito",
                 desc: "Levamos procedimentos e cuidados essenciais para quem tem pouco ou nenhum acesso a serviços odontológicos.",
                 photoSrc: "/images/whatWeDo01.JPG",
                 photoLabel: "Atendimento odontológico",
               },
               {
                 icon: <HeartHandshake className="w-8 h-8 text-green-400" />,
-                title: "Voluntariado profissional",
+                title: "Programa de Voluntariado Profissional",
                 desc: "Dentistas e profissionais de saúde participam de missões organizadas, com protocolos claros e resultados documentados.",
                 photoSrc: "/images/whatWeDo02.JPG",
                 photoPosition: "center 25%",
@@ -232,10 +232,10 @@ export function Inicio() {
               },
               {
                 icon: <BookOpen className="w-8 h-8 text-green-400" />,
-                title: "Formação local (ASB)",
-                desc: "Durante a permanência do caminhão, treinamos moradores como auxiliares de saúde bucal. Eles ganham qualificação prática e novas possibilidades de trabalho.",
+                title: "Prática Gratuita para estudantes de ASB",
+                desc: "Oferecemos espaço de prática para estudantes de ASB concluírem a certificação.",
                 photoSrc: "/images/WhatWeDo03.JPG",
-                photoLabel: "Formação de moradores ASB",
+                photoLabel: "Prática de estudantes de ASB",
               },
             ].map((card, idx) => (
               <motion.div

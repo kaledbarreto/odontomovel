@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Modal } from "@/components/ui/Modal";
-import { Mail, Phone, ExternalLink, ChevronDown } from "lucide-react";
+import { Mail, Phone, ExternalLink, ChevronDown, HandCoins } from "lucide-react";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -28,8 +28,8 @@ const faqItems = [
   { Q: "Como posso ser voluntário(a)?", A: 'Cadastre-se em "Seja voluntário". A equipe avalia e entra em contato para alinhamento de disponibilidade.' },
   { Q: "Preciso ser dentista para voluntariar?", A: "O foco é saúde bucal, mas podem existir vagas de apoio conforme a necessidade local." },
   { Q: "O projeto registra fotos e vídeos durante as ações?", A: "Sim, seguindo critérios de ética, respeito e privacidade; autorizações podem ser solicitadas." },
-  { Q: "O que é a Formação ASB e como funciona?", A: "Formação prática local durante a permanência do caminhão, com acompanhamento da equipe." },
-  { Q: "A certificação da Formação ASB tem validade legal?", A: "O certificado registra participação e prática; busca-se parceria com instituição habilitada para reconhecimento formal." },
+  { Q: "O que é a Formação ASB e como funciona?", A: "Durante a permanência do caminhão, oferecemos prática gratuita para estudantes de ASB concluírem a formação, com acompanhamento da equipe." },
+  { Q: "Quem pode fazer a prática de ASB no OdontoMóvel?", A: "Estudantes que já fizeram o curso teórico em uma instituição credenciada, cumprindo a carga horária mínima exigida." },
   { Q: "Como uma instituição de ensino pode apoiar a validação?", A: "Pode apoiar com trilha pedagógica complementar, validação conforme regras internas ou docência/mentoria." },
   { Q: "Como entrar em contato para levar o ITBSS para minha cidade?", A: "Preencha o formulário e selecione essa opção, informando município/UF e possíveis parceiros." },
   { Q: "Como acompanhar atualizações e resultados do projeto?", A: "Acompanhe redes sociais oficiais e a seção de Atualizações/Notícias do site." },
@@ -60,7 +60,7 @@ function FaqAccordion({ Q, A }: { Q: string; A: string }) {
 }
 
 export function Footer() {
-  const [modalContent, setModalContent] = useState<"noticias" | "faq" | "lgpd" | "imprensa" | null>(null);
+  const [modalContent, setModalContent] = useState<"noticias" | "faq" | "lgpd" | null>(null);
   const closeModal = () => setModalContent(null);
 
   return (
@@ -160,14 +160,6 @@ export function Footer() {
                       Notícias e Atualizações
                     </button>
                   </li>
-                  <li>
-                    <button
-                      onClick={() => setModalContent("imprensa")}
-                      className="text-sm text-primary-300 hover:text-white transition-colors text-left"
-                    >
-                      Imprensa / Kit mídia
-                    </button>
-                  </li>
                 </ul>
               </div>
 
@@ -179,27 +171,34 @@ export function Footer() {
                 <ul className="flex flex-col gap-4 mb-8">
                   <li>
                     <a
-                      href="mailto:contato@odontomovel.org"
+                      href="mailto:institutotbss@gmail.com"
                       className="flex items-start gap-3 group"
                     >
                       <Mail size={16} className="shrink-0 mt-0.5 text-primary-400 group-hover:text-green-400 transition-colors" />
                       <span className="text-sm text-primary-300 group-hover:text-white transition-colors">
-                        contato@odontomovel.org
+                        institutotbss@gmail.com
                       </span>
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://wa.me/55"
+                      href="https://wa.me/5571982154401"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-start gap-3 group"
                     >
                       <Phone size={16} className="shrink-0 mt-0.5 text-primary-400 group-hover:text-green-400 transition-colors" />
                       <span className="text-sm text-primary-300 group-hover:text-white transition-colors">
-                        WhatsApp
+                        (71) 98215-4401
                       </span>
                     </a>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <HandCoins size={16} className="shrink-0 mt-0.5 text-primary-400" />
+                    <span className="text-sm text-primary-300">
+                      Doações (PIX / PayPal):<br />
+                      <span className="text-white">itbssbrasil@gmail.com</span>
+                    </span>
                   </li>
                 </ul>
 
@@ -232,13 +231,6 @@ export function Footer() {
                   className="hover:text-primary-300 transition-colors"
                 >
                   FAQ
-                </button>
-                <span className="text-primary-700">|</span>
-                <button
-                  onClick={() => setModalContent("imprensa")}
-                  className="hover:text-primary-300 transition-colors"
-                >
-                  Imprensa
                 </button>
               </div>
             </div>
@@ -279,46 +271,7 @@ export function Footer() {
           <p>Coletamos nome, e-mail e telefone através de formulários apenas para fins de contato, processo seletivo de voluntariado ou parcerias institucionais.</p>
           <p>Seus dados não são vendidos ou compartilhados com terceiros para fins comerciais.</p>
           <p>Ao enviar qualquer formulário neste site, você concorda com o uso dos seus dados para retorno de contato conforme descrito nesta política.</p>
-          <p>Para solicitar exclusão, correção ou acesso aos seus dados, entre em contato pelo e-mail <span className="text-primary-600 font-medium">contato@odontomovel.org</span>.</p>
-        </div>
-      </Modal>
-
-      {/* Imprensa Modal */}
-      <Modal isOpen={modalContent === "imprensa"} closeModal={closeModal} title="Imprensa / Kit Mídia">
-        <div className="space-y-4">
-          <p className="text-sm text-grayui">
-            Jornalistas e veículos de comunicação podem solicitar materiais institucionais, imagens e press releases abaixo.
-          </p>
-          <a
-            href="#"
-            className="flex items-center gap-3 p-4 border border-bordercolor rounded-xl hover:bg-graylight transition-colors group"
-          >
-            <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#284679" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-grafite group-hover:text-primary-600 transition-colors">Kit de Logos (ZIP)</h4>
-              <p className="text-xs text-grayui">Formatos PNG, SVG, AI</p>
-            </div>
-          </a>
-          <a
-            href="#"
-            className="flex items-center gap-3 p-4 border border-bordercolor rounded-xl hover:bg-graylight transition-colors group"
-          >
-            <div className="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#284679" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-grafite group-hover:text-primary-600 transition-colors">Release de Imprensa (PDF)</h4>
-              <p className="text-xs text-grayui">Histórico completo e métricas do projeto</p>
-            </div>
-          </a>
-          <p className="text-xs text-grayui pt-1">
-            Para solicitações específicas, entre em contato em{" "}
-            <a href="mailto:contato@odontomovel.org" className="text-primary-600 hover:underline">
-              contato@odontomovel.org
-            </a>
-          </p>
+          <p>Para solicitar exclusão, correção ou acesso aos seus dados, entre em contato pelo e-mail <span className="text-primary-600 font-medium">institutotbss@gmail.com</span>.</p>
         </div>
       </Modal>
     </>

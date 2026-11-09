@@ -20,7 +20,7 @@ const pilares = [
   },
   {
     title: "Formação que gera futuro",
-    desc: "Treinamos moradores das próprias comunidades. Eles saem do programa com qualificação prática e caminhos reais para o mercado de trabalho.",
+    desc: "Oferecemos Prática Gratuita para Formandos em ASB concluírem sua certificação com qualidade.",
     icon: <GraduationCap className="w-7 h-7" />,
     bg: "#4DAD75",
   },

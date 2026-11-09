@@ -56,11 +56,10 @@ function StatCard({ value, label, suffix = "", index }: { value: number; label: 
 }
 
 const stats = [
-  { value: 45000, suffix: "+", label: "Atendimentos Realizados" },
-  { value: 110000, suffix: "+", label: "Procedimentos odontológicos" },
-  { value: 25, suffix: "", label: "Municípios/territórios atendidos" },
-  { value: 350, suffix: "+", label: "Voluntários mobilizados (BR/DE)" },
-  { value: 85, suffix: "", label: "Pessoas capacitadas (ASB)" },
+  { value: 56690, suffix: "+", label: "Pacientes Atendidos" },
+  { value: 177000, suffix: "+", label: "Procedimentos Odontológicos realizados" },
+  { value: 55, suffix: "+", label: "Territórios Atendidos" },
+  { value: 820, suffix: "+", label: "Dentistas Voluntários (Brasil / Alemanha)" },
 ];
 
 const depoimentos = [
@@ -121,11 +120,11 @@ export function Impacto() {
             Impacto que se mede em sorrisos e em oportunidades.
           </h2>
           <p className="text-lg text-primary-300 leading-relaxed">
-            O ITBSS não é só atendimento clínico. A cada ciclo, levamos prevenção, mobilização e formação. Quem passa pelo programa sai com mais do que um tratamento no dente.
+            O ITBSS não é só atendimento clínico. A cada ciclo, levamos prevenção, mobilização e prática para formandos em ASB. Quem passa pelo programa sai com mais do que um tratamento no dente.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12">
           {stats.map((stat, idx) => (
             <StatCard key={idx} index={idx} value={stat.value} suffix={stat.suffix} label={stat.label} />
           ))}
@@ -158,7 +157,7 @@ export function Impacto() {
           <div className="grid grid-cols-3 gap-3 mt-3">
             <PhotoSlot src="/images/impact04.JPG" alt="Equipe de voluntários" className="h-40" />
             <PhotoSlot src="/images/impact05.JPG" alt="Prevenção e educação" className="h-40" />
-            <PhotoSlot src="/images/impact06.JPG" alt="Formação ASB em campo" className="h-40" />
+            <PhotoSlot src="/images/impact06.JPG" alt="Prática ASB em campo" className="h-40" />
           </div>
         </motion.div>
 
@@ -186,12 +185,10 @@ export function Impacto() {
               <Map />
             </div>
             <div className="flex flex-wrap gap-2">
-              {["Salvador, BA", "Feira de Santana, BA", "Ilhéus, BA", "+22 municípios"].map((loc) => (
-                <span key={loc} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-primary-200 text-xs font-medium">
-                  <MapPin className="w-3 h-3 text-green-400" />
-                  {loc}
-                </span>
-              ))}
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-primary-200 text-xs font-medium">
+                <MapPin className="w-3 h-3 text-green-400" />
+                55 territórios visitados
+              </span>
             </div>
           </motion.div>
 

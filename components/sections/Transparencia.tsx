@@ -110,40 +110,6 @@ export function Transparencia() {
           ))}
         </div>
 
-        {/* Trust banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="relative overflow-hidden rounded-2xl max-w-3xl mx-auto"
-          style={{ background: "linear-gradient(135deg, #EEF1F7 0%, #EDF7F2 100%)" }}
-        >
-          <div className="h-1 w-full bg-gradient-to-r from-primary-500 via-yellow-500 to-green-500" />
-          <div className="p-8 md:p-10">
-            <p className="text-center text-sm font-bold uppercase tracking-widest text-primary-500 mb-8">
-              Credenciais institucionais verificadas
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">
-              {[
-                { label: "CNPJ Ativo", value: "Regularizado", icon: <ShieldCheck className="w-6 h-6" /> },
-                { label: "CRO-BA", value: "Certificado", icon: <FileText className="w-6 h-6" /> },
-                { label: "Balanços", value: "Públicos", icon: <ShieldCheck className="w-6 h-6" /> },
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center gap-3 group">
-                  <div className="w-16 h-16 rounded-full bg-white border-2 border-green-200 flex items-center justify-center text-green-600 shadow-card group-hover:border-green-400 group-hover:shadow-elevated transition-all duration-300">
-                    {item.icon}
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xs font-semibold text-grayui uppercase tracking-wide">{item.label}</div>
-                    <div className="text-sm font-bold text-green-600 mt-0.5">{item.value}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
       </Container>
     </Section>
   );
